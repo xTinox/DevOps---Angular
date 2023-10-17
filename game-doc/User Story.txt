@@ -1,0 +1,65 @@
+﻿1. En tant que joueur,
+je veux pouvoir choisir mon username
+afin de personnaliser la partie
+
+
+2. En tant que joueur,
+je veux pouvoir générer une table aléatoire d'une difficulté choisie entre six différentes
+afin de gérer la difficulté du jeu
+
+
+3. En tant que joueur,
+je veux pouvoir cliquer sur une case vide de la table et choisir un chiffre entre 1 et 9
+afin de pouvoir remplir la table
+
+
+4. En tant que joueur,
+je veux pouvoir naviguer dans l'historique de mes coups
+afin de corriger mes erreurs
+
+
+5. En tant que joueur,
+je veux pouvoir annuler le retour en arrière sur mes coups
+afin de gérer mon avancée
+
+
+6. En tant que joueur,
+je veux pouvoir visualiser au cours de la partie le score de mes prédécesseurs (classement)
+afin de de comparer mes performances
+
+
+7. En tant que joueur,
+je veux pouvoir revenir au menu à la fin de la partie
+afin de ne pas avoir à fermer l'application pour recommencer
+
+
+8. En tant que joueur,
+je peux choisir d'avoir des indices sur le remplissage des cases et qu'elles se remplissent automatiquement au clique droit
+afin d'apprendre à jouer/avoir de l'aide
+
+
+9. En tant que joueur,
+je veux pouvoir savoir en temps réel si ma réponse est correcte
+afin de connaître mes erreurs
+
+
+10. En tant que joueur,
+je veux pouvoir visualiser un compteur de mes coups en temps réel
+afin de prévoir mon score
+
+
+11. En tant que joueur,
+je veux qu'on m'avertisse de la fin de la partie
+afin de savoir quand la partie est terminée
+
+
+
+
+12. En tant que joueur,
+je veux pouvoir visualiser dans l'historique la table courante ainsi que les tables suivant des coups risqués
+afin de pouvoir gérer mes retours en arrière en fonction de ma prise de risque
+
+
+13. En tant que joueur,
+je veux pouvoir lancer la partie avec une table que je peux prévisualiser sur le menu indépendamment de la difficulté
+afin de pouvoir lancer une partie

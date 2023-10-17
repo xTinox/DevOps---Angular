@@ -1,0 +1,30 @@
+* {
+    font-family: Bodo;
+    text-align: center;
+  }
+  
+  .board {
+  
+      overflow-y: hidden;
+      overflow-x: hidden;
+      border: 2px solid;
+      position: relative;
+      margin: auto;
+      }
+  
+  .case {
+      position: relative;
+      background: rgb(190, 190, 190);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      text-align: center;
+      font-size: x-large;
+      border: 1px solid;
+  }
+  
+  .nomCol{
+      border: 2px solid;
+      font-weight: bold;
+  }

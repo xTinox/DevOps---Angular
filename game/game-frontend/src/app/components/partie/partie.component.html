@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="history-container">
+        <io-tree-history style="height: 70%" [style.width]="'35%'" [svgIconSize]="200" [rootRenderer]="rootRenderer()"></io-tree-history>
+    </div>
+    <div class="grille-container">
+        <app-grille></app-grille>
+    </div>
+    <div class="cote-droit">
+        <div class="classement">
+            <button mat-fab color="grey" (click)="openClassement()">
+                <mat-icon svgIcon="rank" aria-hidden="false" aria-label="SVG icon"></mat-icon>
+            </button>
+        </div>
+        <div class="other-container">
+            JOUEUR
+            <mat-card>
+                <mat-card-content>{{name}}</mat-card-content>
+            </mat-card>
+        </div>
+        <div style="margin-top:20px">
+            Coups : {{this.sudokuService.currentPartie?.score}}
+        </div>
+        <button style="margin-top:100px" routerLink="/menu">Back to menu</button>
+        <p style="font-size: smaller;">(if the grid doesn't displayed correctly, please restart it from the menu)</p>
+    </div>
+</div>
+
+
+<div *ngIf="this.sudokuService.partieFinie() ? openFinished() : false"></div>

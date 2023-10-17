@@ -1,0 +1,37 @@
+﻿1. Au début d'une partie on doit pouvoir entrer un nom d'utilisateur et qu'il reste affiché constamment jusqu'à la fin de la partie (il ne doit pas être enregistrer dans le classement si le sudoku n'est pas terminé)
+
+
+2. On doit pouvoir vérifier qu'en lançant deux parties de difficultés différentes le nombre de cases vides n'est pas la même et que la différence est cohérente avec l’écart de difficulté.
+
+
+3. Si l'on clique gauche sur une case vide un menu déroulant apparaît laissant le choix du chiffre à insérer dans la case (possibilité d'erreur).
+
+
+4. on doit pouvoir choisir dans un arbre un état de la table correspondant à un état suivant un des coups antérieurs et que la table courante soit mise à jour en fonction de l’état choisi, c'est-à-dire qu’elle doit être mise à l’identique.
+
+
+5. Après avoir choisi un état antérieur de la table dans l'arbre on doit pouvoir revenir de la même manière dans un état postérieur
+
+
+6. Lors d’une partie en cours on doit pouvoir consulter le classement des différents utilisateurs du jeu dans une fenêtre qui s'ouvre après avoir cliqué sur un certain icône, chaque score étant associé au nom de l’utilisateur l’ayant réalisé.
+
+
+7. Si on clique sur le bouton menu apparu à la fin d'une partie on doit revenir sur le menu
+
+
+8. si on coche une case spécifique avant le lancement de la partie on doit voire afficher les suggestions de coups dans les cases ainsi que pouvoir les remplir automatiquement grâce au clique droit
+
+
+9. Lors d'un mauvais coup le fond de la case doit se colorer en rouge ainsi que les autres cases qui sont la raison de l'erreur (celles déjà remplies par le même chiffre)
+
+
+10. à chaque coup on doit pouvoir visualiser le compteur de coup s'incrémenter à l'aide d'un label
+
+
+11. Lorsque la partie est terminée une fenêtre s'ouvre et affiche le score (nombre de coups) en dessous du nom d'utilisateur
+
+
+12. Dans l'arbre historique la table courante s'affiche en grise puis en blanc lors des coups futur ou en violet si le coup était risqué
+
+
+13. On doit pouvoir cliquer sur une table afficher sur le menu de départ pour lancer la partie avec

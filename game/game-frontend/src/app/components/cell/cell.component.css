@@ -1,0 +1,97 @@
+.select-tile {
+    min-width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tile-select-html {
+
+    background: transparent;
+    font-family: Bodo;
+    font-size: x-large;
+    height: var(--size-cell);
+    width: var(--size-cell);
+    width: 100%;
+    height : 100%;
+    text-align: center;
+    appearance: none;
+    border: none;
+}
+
+.tile-error {
+    background: lightcoral;
+    width: calc(var(--size-cell) - 2px);
+    height: calc(var(--size-cell) - 2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.case {
+    background: white;
+    width: calc(var(--size-cell) - 2px);
+    height: calc(var(--size-cell) - 2px);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid;
+}
+
+.case:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+.case-error {
+    background: rgb(255, 0, 0);
+    width: calc(var(--size-cell) - 2px);
+    height: calc(var(--size-cell) - 2px);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid;
+}
+
+.brouillon {
+    height: 100%;
+    width: 100%;
+    color: rgb(161, 161, 161);
+    font-size: medium;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    justify-content: left;
+    align-items: left;
+    z-index: 0;
+}
+
+.help-tile {
+    position: absolute;
+    display: grid;
+    color: gray;
+    font-size: medium;
+    user-select: none; /* makes it transparent to selection */
+    pointer-events: none; /* makes it transparent to selection */
+    /*overflow-wrap: break-word;*/
+    z-index: 100; /* put it front to the board */
+    width: calc(var(--size-cell) - 2px);
+    height: calc(var(--size-cell) - 2px);
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.lecture {
+    background: rgb(114, 114, 114);
+}
+
+.modifiable {
+    position: absolute;
+}

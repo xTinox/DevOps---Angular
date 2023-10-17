@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Bodo;
+  src: url("../assets/BodoAmat.ttf");
+}
+
+* {
+  font-family: Bodo;
+}
+
+div {
+  --size-cell: 60px;
+  --nb-cell: 9;
+  }
+.board {
+  width: calc(var(--size-cell) * var(--nb-cell));
+  height: calc(var(--size-cell) * var(--nb-cell));
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border: 1px solid;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  margin: auto;
+  }
+.case {
+  background: white;
+  width: calc(var(--size-cell) - 2px);
+  height: calc(var(--size-cell) - 2px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: x-large;
+  border: 1px solid;
+  }

@@ -1,0 +1,8 @@
+<div>
+    <h1> GG {{this.sudokuService.currentPartie?.name}} !</h1>
+
+    <p> You have done this {{this.sudokuService.currentPartie?.difficulte?.getNom()}} sudoku !</p>
+    <p>Score {{this.sudokuService.currentPartie?.score}}</p>
+
+    <button routerLink="/menu" (click) = "retourMenu()">Back to menu</button>
+</div>

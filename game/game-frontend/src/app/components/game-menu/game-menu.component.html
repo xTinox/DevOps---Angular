@@ -1,0 +1,36 @@
+
+<div>
+    <div class="playerName">playerName
+        <div class="boxName">
+            <mat-form-field appearance="fill">
+                <input matInput [(ngModel)]="playerName">
+            </mat-form-field>
+        </div>
+    </div>
+    <!--<input class="nom" #box (keyup.enter)="setPlayerName(box.value)">-->
+    <div class="suggestions">
+        <input type="checkbox" (click)="setSuggestion()">  With suggestions (prevent recording the game)
+    </div>
+    <div class="text">Select a map to play or replay with:</div>
+    <div class="case">
+        <div class="generate">
+            <button mat-button (click)="generatePartieRandom()" routerLink="/game">
+                <label>Generate random board</label>
+            </button>
+        </div>
+        <div class="difficultes">
+            <select id="select-list" [(ngModel)] = "difficulteChoisie" (click)="setDifficulte(difficulteChoisie)" (change)="loadDiff()">
+                <option  *ngFor="let dif of difficultesChoix"  [value]="dif.id">{{dif.name}}</option>
+            </select>
+        </div>
+        <div>
+            <!--<button mat-button (click)="generatePartie()" class="imageSud" routerLink="/game"></button>-->
+            <img (click)="generatePartie()" routerLink="/game" class="grille" [src]="this.grilleCourante?.src" alt="">
+        </div>
+        <div class="arrow">
+            <button (click)="precedGrille()" id="precedent"><</button>
+            <button (click)="suivGrille()" id="suivant">></button>
+        </div>
+    </div>
+    <label class="text2">Click on a Sudoku board to launch the game with</label>
+</div>
