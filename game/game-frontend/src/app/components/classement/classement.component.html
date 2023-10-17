@@ -1,0 +1,21 @@
+<div>
+    <h1 style="text-align: center">TOP 5 Classement</h1>
+    <p>Votre nom : {{sudokuService.currentPartie?.name}}</p>
+    <table class="board" style='width: 500px'>
+        <col width="20%">
+        <col width="40%">
+        <col width="40%">
+        <ng-container>
+            <tr>
+                <td class='nomCol'>Rang</td>
+                <td class='nomCol'>Nom</td>
+                <td class='nomCol'>Score</td>
+            </tr>
+            <tr *ngFor="let y of nbJoueurs">
+                <td>#{{y+1}}</td>
+                <td>{{classment[y].name}}</td>
+                <td>{{classment[y].score}}</td>
+            </tr>
+        </ng-container>
+      </table>
+</div>

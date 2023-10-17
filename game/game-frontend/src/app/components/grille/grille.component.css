@@ -1,0 +1,51 @@
+div {
+    --size-cell: 60px;
+    --nb-cell: 9;
+}
+
+.board {
+    width: calc(var(--size-cell) * var(--nb-cell));
+    height: calc(var(--size-cell) * var(--nb-cell));
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border: 2px solid;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    margin: auto;
+    }
+
+.case {
+    position: relative;
+    background: rgb(190, 190, 190);
+    width: calc(var(--size-cell) - 2px);
+    height: calc(var(--size-cell) - 2px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid;
+}
+
+.style{
+    background: transparent;
+    border: none;
+}
+
+.tile-error {
+    background: lightcoral;
+    position: relative;
+    width: calc(var(--size-cell) - 2px);
+    height: calc(var(--size-cell) - 2px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid;
+}

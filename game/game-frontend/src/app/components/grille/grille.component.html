@@ -1,0 +1,7 @@
+<div class='board'>
+  <ng-container *ngFor="let y of [0,1,2,3,4,5,6,7,8]" > 
+    <div class='case' *ngFor="let x of [0,1,2,3,4,5,6,7,8]">
+        <app-cell [cell]="lectureOfCell(x,y)"></app-cell>
+    </div>
+  </ng-container>
+</div>

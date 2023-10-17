@@ -1,0 +1,22 @@
+﻿Routes REST
+
+
+GET api/sudoku/classement => instance JSON d’un tableau de Score avec code OK (ou code Internal Server Error si erreur dans le back-end).
+@PathVariable (“<id grid>”) ? <id grid>
+
+
+
+
+GET api/sudoku/grids => instance JSON d’un tableau d’entiers avec code OK (ou code Internal Server Error si erreur dans le back-end).
+@PathVariable (“id_grid”) ? <id grid> 
+@PathVariable (“difficulté”) String difficulté
+
+
+- si l’id null ou à zéro (cela dépend de si c’est un nombre ou un string etc. d’où le point d’interrogation ) on rend une grille aléatoire en appelant la route REST fournie de la difficulté donnée.
+
+
+
+
+POST api/sudoku/score => instance JSON d’un couple (name : score) avec code OK (ou code Internal Server Error si erreur dans le back-end).
+@RequestBody Score s
+@PathVariable (“<id grid>”) ? <id grid>

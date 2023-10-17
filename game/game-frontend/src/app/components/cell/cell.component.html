@@ -1,0 +1,21 @@
+<div [ngClass]="cell?.error ? 'tile-error' : ''" *ngIf="cell?.lecture">
+    {{cell?.valeur}}
+</div>
+
+
+<div [ngClass]="cell?.error ? 'case-error' : 'case'" *ngIf="!cell?.lecture">
+    <select [value]="this.cell?.valeur" class="tile-select-html" [ioSelect] (selectBinder)="setValue($event)" [ioClick] (clickBinder)="directSet($event)">
+        <option [value]=0></option>
+        <option *ngFor="let i of values()" [value]=i>
+            {{i}}
+        </option>
+    </select>
+    
+    <div class='help-tile' *ngIf="cell?.affichageBrouillons && cell?.valeur==0">
+        <div *ngFor="let b of cell?.brouillons">
+            <div *ngIf="b!=0">
+                {{b}}
+            </div>
+        </div>
+    </div>
+</div>
