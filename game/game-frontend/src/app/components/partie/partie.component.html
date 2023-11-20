@@ -14,13 +14,13 @@
         <div class="other-container">
             JOUEUR
             <mat-card>
-                <mat-card-content>{{name}}</mat-card-content>
+                <mat-card-content id="idPlayerInGame">{{name}}</mat-card-content>
             </mat-card>
         </div>
         <div style="margin-top:20px">
             Coups : {{this.sudokuService.currentPartie?.score}}
         </div>
-        <button style="margin-top:100px" routerLink="/menu">Back to menu</button>
+        <button id="returnToMenu" style="margin-top:100px" routerLink="/menu">Back to menu</button>
         <p style="font-size: smaller;">(if the grid doesn't displayed correctly, please restart it from the menu)</p>
     </div>
 </div>
