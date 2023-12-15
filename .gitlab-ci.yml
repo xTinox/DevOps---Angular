@@ -22,7 +22,7 @@ build-back:
     paths:
       - game/game-backend/target/site/jacoco/jacoco.xml
       - game/game-backend/target/game-backend-0.0.1.jar
-    expire_in: 1 hour
+    expire_in: 1 hour 
     
 build-front:
   image: registry.gitlab.inria.fr/diverse/docker/docker-image/insa-node:16.13.2
