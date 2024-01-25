@@ -34,7 +34,7 @@ export class SudokuService {
       return await lastValueFrom(this.http
         .post<void>('api/sudoku/grid/register/'+diff, JSON.stringify(this.currentPartie?.chiffresInitiales)));
     } catch (err) {
-      return console.log("La grille n'a pas pu être enregistré");
+      return console.log("La grille n'a pas pu être enregistrée");
     }
   }
 
