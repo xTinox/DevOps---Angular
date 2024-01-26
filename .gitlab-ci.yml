@@ -1,5 +1,16 @@
 stages:
+  - lint
   - build
+
+lint:
+  image: registry.gitlab.inria.fr/diverse/docker/docker-image/insa-node:16.13.2
+  stage: lint
+  script:
+    - npm run lint
+  only:
+    - merge_requests
+    - master
+
 
 build-back:
   image: registry.gitlab.inria.fr/diverse/docker/docker-image/insa-maven:3.8-openjdk-17
