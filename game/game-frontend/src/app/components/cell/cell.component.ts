@@ -21,6 +21,7 @@ export class CellComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    return
   }
 
 
@@ -53,7 +54,7 @@ export class CellComponent implements OnInit {
   public directSet(binder: PartialPointBinder) {
     binder
     .toProduce(() => new SetValue(this.cell!.getBrouillonsWithoutZeros()[0], this.cell!.indice, this.sudokuService.currentPartie!))
-    .when(i => i.button === 2 && this.cell?.getBrouillonsWithoutZeros().length! >= 1)
+    .when(i => i.button === 2 && this.cell?.getBrouillonsWithoutZeros().length != null && this.cell?.getBrouillonsWithoutZeros().length >= 1)
     .bind();
   }
   

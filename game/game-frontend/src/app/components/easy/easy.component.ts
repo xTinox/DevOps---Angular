@@ -22,7 +22,7 @@ export class EasyComponent implements OnInit, Difficulte {
     return "easy"
   }
  
-  getSudoku(): Promise<any> {
+  getSudoku(): Promise<string> {
     return this.sudokuService.sudoku("easy", this.random)
   }
 
@@ -31,7 +31,7 @@ export class EasyComponent implements OnInit, Difficulte {
   }
 
   ngOnInit(): void {
-  
+    return
   }
 
   getClassement(id : string):Promise<Array<Score>>{

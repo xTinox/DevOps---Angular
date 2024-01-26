@@ -18,9 +18,6 @@ export class Classement{
     private constructor() { 
     }
 
-    ngOnInit(): void {
-    }
-
     setScore(s : Score) : void{
         this.scores.push(s)
     }

@@ -22,7 +22,7 @@ export class InhumanComponent implements OnInit, Difficulte {
     return "inhuman"
   }
   
-  getSudoku(): Promise<any> {
+  getSudoku(): Promise<string> {
     return this.sudokuService.sudoku("inhuman", this.random)
   }
 
@@ -31,6 +31,7 @@ export class InhumanComponent implements OnInit, Difficulte {
   }
 
   ngOnInit(): void {
+    return
   }
 
   getClassement(id : string):Promise<Array<Score>>{

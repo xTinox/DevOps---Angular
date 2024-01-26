@@ -30,6 +30,7 @@ export class VeryHardComponent implements OnInit, Difficulte {
   }
 
   ngOnInit(): void {
+    return
   }
 
   getClassement(id : string):Promise<Array<Score>>{

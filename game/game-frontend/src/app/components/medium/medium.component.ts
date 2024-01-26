@@ -21,7 +21,7 @@ export class MediumComponent implements OnInit, Difficulte {
     return "medium"
   }
   
-  getSudoku(): Promise<any> {
+  getSudoku(): Promise<string> {
     return this.sudokuService.sudoku("medium", this.random)
   }
 
@@ -30,6 +30,7 @@ export class MediumComponent implements OnInit, Difficulte {
   }
 
   ngOnInit(): void {
+    return
   }
 
   getClassement(id : string):Promise<Array<Score>>{

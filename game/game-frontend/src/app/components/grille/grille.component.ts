@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges, Input } from '@angular/core';
+import { Component, OnChanges, OnInit, Input } from '@angular/core';
 import { Cell } from 'src/app/cell';
 import { Grille } from 'src/app/Grille';
 import { SudokuService } from 'src/app/service/sudoku.service';
@@ -19,9 +19,10 @@ export class GrilleComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(){
+    return
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     console.log("test changement")
   }
 /*
@@ -32,7 +33,7 @@ export class GrilleComponent implements OnInit, OnChanges {
   }
   */
 
-  showValue(x: number, y:number){
+  showValue(){
     console.log(this.sudokuService.currentPartie?.grille?.getValeurs())
   }
 

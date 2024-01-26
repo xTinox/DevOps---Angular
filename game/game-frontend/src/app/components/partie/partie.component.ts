@@ -21,7 +21,6 @@ export class PartieComponent implements OnInit {
   name : string = ""
   chiffres: number[] = []
   initial: boolean[] = []
-  c : any
 
   fini : boolean = false
   afficheFin: boolean = true

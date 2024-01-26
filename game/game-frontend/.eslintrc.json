@@ -13,7 +13,12 @@
         "ecmaVersion": "latest",
         "project": "./tsconfig.json"
     },
-    "ignorePatterns": ["./karma.conf.js", "./jest.config.js", "node_modules/"],
+    "ignorePatterns": [
+        "*.config.js",
+        "*.config.ts",
+        "*.conf.js",
+        "node_modules/",
+        "cypress/"],
     "rules": {
     }
 }

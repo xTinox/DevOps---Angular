@@ -104,7 +104,7 @@ export class GameMenuComponent implements OnInit {
     this.grilleCourante = undefined
     this.listeNombresGrilles = []
     this.listeImgGrilles = []
-    this.nbGrilles = await this.sudokuService.nbGrilles(this.difficultesChoix[this.difficulteChoisie].name) - 1;
+    this.nbGrilles = +(await this.sudokuService.nbGrilles(this.difficultesChoix[this.difficulteChoisie].name)) - 1;
     console.log(this.nbGrilles);
     this.listeIndexGrilles = Array(this.nbGrilles).fill(0).map((x,i)=>i)
     console.log(this.listeIndexGrilles);

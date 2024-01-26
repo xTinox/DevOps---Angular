@@ -20,7 +20,7 @@ export class InsaneComponent implements OnInit, Difficulte {
     return "insane"
   }
   
-  getSudoku(): Promise<any> {
+  getSudoku(): Promise<string> {
     return this.sudokuService.sudoku("insane", this.random)
   }
 
@@ -29,6 +29,7 @@ export class InsaneComponent implements OnInit, Difficulte {
   }
 
   ngOnInit(): void {
+    return
   }
 
   getClassement(id : string):Promise<Array<Score>>{

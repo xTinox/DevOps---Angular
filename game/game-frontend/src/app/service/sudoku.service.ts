@@ -17,7 +17,7 @@ export class SudokuService {
 
   constructor(private http: HttpClient) { }
 
-  sudoku(diff : string, random : boolean) : Promise<any>{
+  sudoku(diff : string, random : boolean) : Promise<string>{
     if(!random){
       return lastValueFrom(this.http.get('api/sudoku/grids/'+diff,{'responseType': "text"}))
     }else{
@@ -25,7 +25,7 @@ export class SudokuService {
     }
   }
 
-  nbGrilles(diff : string) : Promise<any>{
+  nbGrilles(diff : string) : Promise<string>{
       return lastValueFrom(this.http.get('api/sudoku/grids/nbGrille/'+diff,{'responseType': "text"}))
   }
 
@@ -61,7 +61,7 @@ export class SudokuService {
     }
   }
 
-  getName() : any{
+  getName() : string|undefined{
     return this.currentPartie?.name
   }
 
