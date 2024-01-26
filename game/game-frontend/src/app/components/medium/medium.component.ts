@@ -25,7 +25,7 @@ export class MediumComponent implements OnInit, Difficulte {
     return this.sudokuService.sudoku("medium", this.random)
   }
 
-  getNbGrilles(): Promise<String> {
+  getNbGrilles(): Promise<string> {
     return this.sudokuService.nbGrilles("medium")
   }
 

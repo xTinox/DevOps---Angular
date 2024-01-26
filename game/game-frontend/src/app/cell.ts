@@ -23,7 +23,7 @@ export class Cell implements InterfaceCell{
     }
 
     getBrouillonsWithoutZeros() : number[]{
-        let withoutZero : number[] = []
+        const withoutZero : number[] = []
         this.brouillons.map(v => {
             if(v!=0) withoutZero.push(v)
         })

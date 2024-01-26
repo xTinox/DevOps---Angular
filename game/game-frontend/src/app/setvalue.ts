@@ -74,7 +74,7 @@ export class SetValue extends UndoableCommand {
             }else{
                 ctx.fillStyle = 'black';
             }
-            let nb = partie!.grille.getValeurs()[i]
+            const nb = partie!.grille.getValeurs()[i]
             if(nb){
                 ctx.fillText(nb.toString() ?? "", (i % 9) * tileSize + 30, Math.floor(i / 9) * tileSize + 85);
             }

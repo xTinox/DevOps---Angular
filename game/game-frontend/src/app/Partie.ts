@@ -37,7 +37,7 @@ export class Partie{
                 console.log(this.idGrille)                
             }
             else{
-                let id: string = BigInt(await this.difficulte.getNbGrilles()
+                const id: string = BigInt(await this.difficulte.getNbGrilles()
                 .then(v => v)
                 .catch(() => "940007023721035684830000097007000005359746218482050076598071002614020759273500801"))
                 .toString()
@@ -45,7 +45,7 @@ export class Partie{
             }
             this.chiffresInitiales = str
             console.log(this.chiffresInitiales)
-            let str1: string[] = str.split('')
+            const str1: string[] = str.split('')
             str1.forEach(value => this.chiffres.push(Number(value)))
             this.grille = new Grille(this.chiffres,this.affichageBrouillons)
             Classement.INSTANCE.majDif(this.difficulte)

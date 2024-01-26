@@ -25,7 +25,7 @@ export class VeryHardComponent implements OnInit, Difficulte {
     return this.sudokuService.sudoku("very-hard", this.random)
   }
 
-  getNbGrilles(): Promise<String> {
+  getNbGrilles(): Promise<string> {
     return this.sudokuService.nbGrilles("very-hard")
   }
 

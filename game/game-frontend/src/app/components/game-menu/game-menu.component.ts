@@ -109,9 +109,9 @@ export class GameMenuComponent implements OnInit {
     this.listeIndexGrilles = Array(this.nbGrilles).fill(0).map((x,i)=>i)
     console.log(this.listeIndexGrilles);
     for(let i=0; i<this.nbGrilles; i++){
-      let str = await this.sudokuService.sudoku(this.difficultesChoix[this.difficulteChoisie].name, false)
-      let str1: string[] = (str.substring(str.length-81,str.length)).split('')
-      let chiffres: Array<number> = []
+      const str = await this.sudokuService.sudoku(this.difficultesChoix[this.difficulteChoisie].name, false)
+      const str1: string[] = (str.substring(str.length-81,str.length)).split('')
+      const chiffres: Array<number> = []
       str1.forEach(value => chiffres.push(Number(value)))
       if(!this.listeNombresGrilles.includes(chiffres)){
         this.listeNombresGrilles.push(chiffres)
@@ -132,7 +132,7 @@ export class GameMenuComponent implements OnInit {
     ctx.font = '25px Bodo';
     ctx.fillStyle = 'black';
     for (let i = 0; i < nombres.length; i++){
-        let nb = nombres[i]
+        const nb = nombres[i]
         if(nb){
             ctx.fillText(nb.toString() ?? "", (i % 9) * tileSize + 7.5, Math.floor(i / 9) * tileSize + 21.25);
         }

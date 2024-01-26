@@ -72,9 +72,9 @@ export class Grille implements InterfaceGrille{
     }
 
     recalculBrouillon(cell: Cell) {
-        let b = []
-        let existants = this.getValeursRow(cell).concat(this.getValeursColumn(cell).concat(this.getValeursCase(cell)))
-        for(let val of [1,2,3,4,5,6,7,8,9]){
+        const b = []
+        const existants = this.getValeursRow(cell).concat(this.getValeursColumn(cell).concat(this.getValeursCase(cell)))
+        for(const val of [1,2,3,4,5,6,7,8,9]){
           if (!existants.includes(Number(val))){
               b.push(Number(val))
           }
@@ -100,7 +100,7 @@ export class Grille implements InterfaceGrille{
     }
 
     getCase(cell : Cell) : Cell[]{
-        let case33: Cell[] = []
+        const case33: Cell[] = []
         let row = ~~(cell.indice/9)
         let col = cell.indice%9
         row = row - row%3
@@ -115,12 +115,12 @@ export class Grille implements InterfaceGrille{
     }
 
     getRow(cell : Cell) : Cell[] {
-        let r = cell.indice-cell.indice%9
+        const r = cell.indice-cell.indice%9
         return this.cellules.slice(r,r+9)
     }
 
     getColumn(cell : Cell) : Cell[] {
-        let col : Cell[] = []
+        const col : Cell[] = []
         for (let r=0; r<9; r++){
             col.push(this.cellules[r*9+cell.indice%9])
         }
@@ -138,7 +138,7 @@ export class Grille implements InterfaceGrille{
     }
 
     getValeurs(): number[]{
-        let valeurs: number[] = []
+        const valeurs: number[] = []
         this.cellules.forEach(val => valeurs.push(val.valeur))
         return valeurs
     }

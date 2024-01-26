@@ -26,7 +26,7 @@ export class InhumanComponent implements OnInit, Difficulte {
     return this.sudokuService.sudoku("inhuman", this.random)
   }
 
-  getNbGrilles(): Promise<String> {
+  getNbGrilles(): Promise<string> {
     return this.sudokuService.nbGrilles("inhuman")
   }
 

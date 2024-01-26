@@ -24,7 +24,7 @@ export class InsaneComponent implements OnInit, Difficulte {
     return this.sudokuService.sudoku("insane", this.random)
   }
 
-  getNbGrilles(): Promise<String> {
+  getNbGrilles(): Promise<string> {
     return this.sudokuService.nbGrilles("insane")
   }
 

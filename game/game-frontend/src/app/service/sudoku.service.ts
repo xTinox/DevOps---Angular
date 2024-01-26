@@ -29,7 +29,7 @@ export class SudokuService {
       return lastValueFrom(this.http.get('api/sudoku/grids/nbGrille/'+diff,{'responseType': "text"}))
   }
 
-  async sendNumbers(diff: String) : Promise<void>{
+  async sendNumbers(diff: string) : Promise<void>{
     try {
       return await lastValueFrom(this.http
         .post<void>('api/sudoku/grid/register/'+diff, JSON.stringify(this.currentPartie?.chiffresInitiales)));
