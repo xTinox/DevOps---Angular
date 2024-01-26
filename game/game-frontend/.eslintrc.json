@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "angular"],
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@angular-eslint/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "project": "./tsconfig.json"
+    },
+    "ignorePatterns": ["./karma.conf.js", "./jest.config.js", "node_modules/"],
+    "rules": {
+    }
+}
