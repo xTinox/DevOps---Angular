@@ -5,6 +5,7 @@ lint:
   image: registry.gitlab.inria.fr/diverse/docker/docker-image/insa-node:16.13.2
   stage: build
   script:
+    - cd game/game-frontend
     - npm run lint
   only:
     - merge_requests
