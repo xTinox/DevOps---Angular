@@ -1,0 +1,118 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: game
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: game
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend-container
+        image: gitlab.insa-rennes.fr:5050/devops-2023/devops-t-ma/devops-t-ma/game-backend:latest
+        ports:
+        - containerPort: 4445
+      imagePullSecrets:
+        - name: secret-insa
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: game
+spec:
+  type: ClusterIP
+  ports:
+    - port: 4445
+      targetPort: 4445
+  selector:
+    app: backend
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: game
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend-container
+        image: gitlab.insa-rennes.fr:5050/devops-2023/devops-t-ma/devops-t-ma/game-frontend:latest
+        ports:
+        - containerPort: 8081
+      imagePullSecrets:
+        - name: secret-insa
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: game
+spec:
+  type: NodePort
+  ports:
+    - port: 8081
+      targetPort: 8081
+  selector:
+    app: frontend
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: game-ingress
+  namespace: game
+spec:
+  ingressClassName: nginx 
+  defaultBackend:
+    service:
+      name: frontend-service
+      port:
+        number: 8081
+  rules:
+  - host: localhost
+  -  http:
+      paths: 
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: backend-service
+            port:
+              number: 4445
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend-service
+            port:
+              number: 8081
+
