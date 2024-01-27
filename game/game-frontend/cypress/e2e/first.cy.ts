@@ -1,3 +1,5 @@
+import { forEach } from "cypress/types/lodash"
+
 describe('Sudoku Page', () => {
   const username = 'Joueur1'
 
@@ -36,26 +38,26 @@ describe('Sudoku Page', () => {
     cy.get('mat-dialog-container').should('not.exist')
   })
 
-  it('Click on cell clickable', () => {
-    cy.get('div[class="board"]').find('select[class="tile-select-html"]').eq(3).select(1)
+  it('Fill a cell', () => {
+    cy.get('div[class="board"]').find('select[class="tile-select-html"]').eq(2).select(5)
     // cy.get('div[class="board"] > ng-reflect-ng-class="case":eq(0)').click()
   })
-  it('Click on cell clickable', () => {
-    cy.get('div[class="board"]').find('select[class="tile-select-html"]').should('exist').then(($div) => {
-      const contenuDiv = $div.text();
-      console.log(contenuDiv);
+  it('Fill the sudoku and finish it', () => {
+
+    function selectOption(i, value) {
+      cy.get('div[class="board"]')
+        .find('select[class="tile-select-html"]')
+        .eq(i)
+        .select(value);
+    }
+
+    selectOption(2,5);
     
-      // const estEntre1et9 = parseInt(contenuDiv) >= 1 && parseInt(contenuDiv) <= 9;
+    const cellToFill = [8,6,1,9,6,4,1,2,5,1,6,2,8,9,4,3,1,3,9,6,3,4,3,8,9,4,6]
     
-      // if (estEntre1et9) {
-      //   cy.get('div[class="board"]')
-      //     .find('div[ng-reflect-ng-class="case"]')
-      //     .eq(2)
-      //     .find('select')
-      //     .select(1);
-      // } else {
-      //   cy.get('div[class="autre-classe"]').should('exist');
-      // }
-    })
+    for (let i = 0; i < cellToFill.length; i++) {
+      selectOption(i+1,cellToFill[i]);
+    }
+
   });
 })
