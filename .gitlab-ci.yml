@@ -6,6 +6,7 @@ lint:
   stage: build
   script:
     - cd game/game-frontend
+    - npm install
     - npm run lint
 
 
