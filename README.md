@@ -45,7 +45,6 @@ microk8s.kubectl apply -f k8s-deployment.yml
 Now you can access the deployed application at `http://127.0.0.1/`.
 
 
-# Old README
 ## Layout
 
 `game/game-backend` is backend of the application. It contains th Java code of the server.
