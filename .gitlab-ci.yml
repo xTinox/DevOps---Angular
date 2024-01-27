@@ -7,9 +7,6 @@ lint:
   script:
     - cd game/game-frontend
     - npm run lint
-  only:
-    - merge_requests
-    - master
 
 
 build-back:
